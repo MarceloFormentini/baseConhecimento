@@ -1,0 +1,79 @@
+[
+    {
+        "nome": "JavaScript",
+        "ano": 1995,
+        "criador": "Brendan Eich",
+        "descricao": "JavaScript é uma linguagem de programação leve, interpretada e orientada a objetos, amplamente utilizada para desenvolvimento web.",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+    },
+    {
+        "nome": "Python",
+        "ano": 1991,
+        "criador": "Guido van Rossum",
+        "descricao": "Python é uma linguagem de programação de alto nível, interpretada e de propósito geral, conhecida por sua legibilidade e simplicidade.",
+        "link": "https://docs.python.org/pt-br/3.14/"
+    },
+    {
+        "nome": "Java",
+        "ano": 1995,
+        "criador": "James Gosling",
+        "descricao": "Java é uma linguagem de programação de propósito geral, orientada a objetos, projetada para ser executada em qualquer plataforma.",
+        "link": "https://docs.oracle.com/en/java/"
+    },
+    {
+        "nome": "C#",
+        "ano": 2000,
+        "criador": "Microsoft",
+        "descricao": "C# é uma linguagem de programação moderna, orientada a objetos, desenvolvida pela Microsoft como parte da plataforma .NET.",
+        "link": "https://learn.microsoft.com/pt-br/dotnet/csharp/"
+    },
+    {
+        "nome": "C++",
+        "ano": 1985,
+        "criador": "Bjarne Stroustrup",
+        "descricao": "C++ é uma linguagem de programação de propósito geral, conhecida por sua eficiência e suporte a programação orientada a objetos.",
+        "link": "https://isocpp.org/"
+    },
+    {
+        "nome": "PHP",
+        "ano": 1995,
+        "criador": "Rasmus Lerdorf",
+        "descricao": "PHP é uma linguagem de script amplamente utilizada para desenvolvimento web, especialmente para criação de páginas dinâmicas.",
+        "link": "https://www.php.net/"
+    },
+    {
+        "nome": "TypeScript",
+        "ano": 2012,
+        "criador": "Microsoft",
+        "descricao": "TypeScript é uma linguagem de programação que estende o JavaScript, adicionando tipagem estática e outros recursos.",
+        "link": "https://www.typescriptlang.org/"
+    },
+    {
+        "nome": "Ruby",
+        "ano": 1995,
+        "criador": "Yukihiro Matsumoto",
+        "descricao": "Ruby é uma linguagem de programação dinâmica, de propósito geral, conhecida por sua simplicidade e produtividade.",
+        "link": "https://www.ruby-lang.org/pt/"
+    },
+    {
+        "nome": "Swift",
+        "ano": 2014,
+        "criador": "Apple",
+        "descricao": "Swift é uma linguagem de programação poderosa e intuitiva para desenvolvimento de aplicativos para iOS, macOS, watchOS e tvOS.",
+        "link": "https://developer.apple.com/swift/"
+    },
+    {
+        "nome": "Go",
+        "ano": 2009,
+        "criador": "Robert Griesemer, Rob Pike, Ken Thompson",
+        "descricao": "Go é uma linguagem de programação de código aberto que facilita a criação de software eficiente e confiável.",
+        "link": "https://go.dev/"
+    },
+    {
+        "nome": "Kotlin",
+        "ano": 2011,
+        "criador": "JetBrains",
+        "descricao": "Kotlin é uma linguagem de programação moderna, concisa e segura, amplamente utilizada para desenvolvimento Android.",
+        "link": "https://kotlinlang.org/"
+    }
+]
