@@ -5,7 +5,7 @@ let dados = [];
 async function pesquisar() {
     if (dados.length === 0) {
         try {
-            let resposta = await fetch('/base_conhecimento/data.json')
+            let resposta = await fetch('data.json')
             dados = await resposta.json();
         } catch (error) {
             console.error('Erro ao carregar os dados:', error);

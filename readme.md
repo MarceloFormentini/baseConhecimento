@@ -1,0 +1,3 @@
+- Entrega até dia 23/11/2025
+- Post no linkdin
+- Utilidade, criatividade, eficacia e apresentação
