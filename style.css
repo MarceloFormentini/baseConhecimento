@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap'); /* Importa a fonte Quicksand do Google Fonts */
 
 * {
@@ -16,39 +17,151 @@ body {
     background: var(--bg-color); /* Define a cor de fundo usando uma variável */
     color: var(--secondary-color); /* Define a cor do texto padrão usando uma variável */
     font-family: "Quicksand", sans-serif; /* Define a família da fonte */
+    min-height: 100vh; /* Altura mínima da viewport */
+    display: flex; /* Layout flexbox */
+    flex-direction: column; /* Organiza elementos em coluna */
 }
 
 header {
     padding: 2rem 1rem; /* Espaçamento interno (2rem em cima/baixo, 1rem nos lados) */
     display: flex; /* Habilita o layout flexbox */
     align-items: center; /* Alinha os itens verticalmente ao centro */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+    justify-content: center; /* Centraliza o conteúdo */
     position: sticky; /* Mantém o cabeçalho fixo no topo ao rolar a página */
     top: 0; /* Posição do topo quando sticky */
     background: var(--bg-color); /* Cor de fundo do cabeçalho */
     z-index: 10; /* Define a ordem de empilhamento para ficar sobre outros elementos */
-    border-bottom: 1px solid var(--bg-color); /* Adiciona uma borda inferior */
-    gap: 1rem; /* Espaçamento entre os elementos flex */
+    border-bottom: 1px solid var(--tertiary-color); /* Adiciona uma borda inferior */
+}
+
+.header-content {
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Largura total */
+    max-width: 800px; /* Largura máxima */
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamanho da fonte */
-    margin: 0; /* Remove a margem padrão */
-    font-weight: 500; /* Peso da fonte (médio) */
-    white-space: nowrap; /* Impede a quebra de linha do texto */
+    font-size: 2rem; /* Tamanho da fonte */
+    margin: 0 0 0.5rem 0; /* Remove a margem padrão, adiciona margem inferior */
+    font-weight: 600; /* Peso da fonte (médio) */
+    color: var(--primary-color); /* Cor primária */
+}
+
+header h2 {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin: 0 0 1rem 0; /* Margem inferior */
+    font-weight: 400; /* Peso da fonte */
+    color: var(--secondary-color); /* Cor secundária */
+}
+
+/* Estilos para o seletor de temporada */
+.temporada-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.temporada-selector label {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.temporada-selector select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--tertiary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.temporada-selector select:hover {
+    border-color: var(--primary-color);
+    background-color: #2a2d30;
+}
+
+.temporada-selector select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(138, 180, 248, 0.25);
+}
+
+.temporada-selector select option {
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+}
+
+.header-buttons {
+    display: flex; /* Layout flexbox */
+    gap: 1rem; /* Espaï¿½amento entre botï¿½es */
+    justify-content: center; /* Centraliza os botï¿½es */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1; /* Ocupa todo o espaï¿½o disponï¿½vel */
+    max-width: 300px; /* Largura mï¿½xima */
+    min-width: 200px; /* Largura mï¿½nima */
+    padding: 1rem 2rem; /* Espaï¿½amento interno */
+    border-radius: 1rem; /* Bordas arredondadas */
+    border: 2px solid; /* Borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-family: inherit; /* Herda a famï¿½lia da fonte */
+    font-weight: 500; /* Peso da fonte */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transiï¿½ï¿½o suave */
+    text-transform: uppercase; /* Texto em maiï¿½sculas */
+    letter-spacing: 0.5px; /* Espaï¿½amento entre letras */
+}
+
+.btn-primary {
+    background-color: var(--primary-color); /* Cor de fundo primï¿½ria */
+    color: var(--bg-color); /* Cor do texto */
+    border-color: var(--primary-color); /* Cor da borda */
+}
+
+.btn-primary:hover {
+    background-color: transparent; /* Fundo transparente */
+    color: var(--primary-color); /* Cor do texto */
+    border-color: var(--primary-color); /* Cor da borda */
+    transform: translateY(-2px); /* Efeito de elevaï¿½ï¿½o */
+    box-shadow: 0 4px 12px rgba(138, 180, 248, 0.3); /* Sombra */
+}
+
+.btn-secondary {
+    background-color: transparent; /* Fundo transparente */
+    color: var(--secondary-color); /* Cor do texto */
+    border-color: var(--secondary-color); /* Cor da borda */
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color); /* Cor de fundo */
+    color: var(--bg-color); /* Cor do texto */
+    border-color: var(--secondary-color); /* Cor da borda */
+    transform: translateY(-2px); /* Efeito de elevaï¿½ï¿½o */
+    box-shadow: 0 4px 12px rgba(232, 234, 237, 0.2); /* Sombra */
 }
 
 div input {
-    padding: 0.375rem 0.75rem; /* Espaçamento interno */
+    padding: 0.375rem 0.75rem; /* Espaï¿½amento interno */
     border-radius: 1rem; /* Arredonda as bordas */
     border: 1px solid var(--tertiary-color); /* Define a borda */
     background: var(--bg-color); /* Cor de fundo */
-    font-family: inherit; /* Herda a família da fonte do elemento pai */
+    font-family: inherit; /* Herda a famï¿½lia da fonte do elemento pai */
     font-size: 1.5rem; /* Tamanho da fonte */
-    transition: all 0.2s ease; /* Adiciona uma transição suave para todas as propriedades */
+    transition: all 0.2s ease; /* Adiciona uma transiï¿½ï¿½o suave para todas as propriedades */
     width: 30rem; /* Largura do input */
     color: var(--secondary-color); /* Cor do texto digitado */
-    margin-right: .5rem; /* Margem à direita */
+    margin-right: .5rem; /* Margem ï¿½ direita */
 }
 
 div input::placeholder {
@@ -58,21 +171,21 @@ div input::placeholder {
 }
 
 div input:focus {
-    outline: none; /* Remove a borda de foco padrão */
+    outline: none; /* Remove a borda de foco padrï¿½o */
     border-color: var(--bg-color); /* Muda a cor da borda ao focar */
     box-shadow: 0 0 0 0.1rem var(--tertiary-color); /* Adiciona uma sombra de caixa para indicar foco */
 }
 
 #botao-busca {
-    padding: 1rem 2rem; /* Espaçamento interno */
+    padding: 1rem 2rem; /* Espaï¿½amento interno */
     border-radius: 1rem; /* Arredonda as bordas */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Muda o cursor para uma mão ao passar por cima */
-    font-family: inherit; /* Herda a família da fonte */
+    border: none; /* Remove a borda padrï¿½o */
+    cursor: pointer; /* Muda o cursor para uma mï¿½o ao passar por cima */
+    font-family: inherit; /* Herda a famï¿½lia da fonte */
     font-weight: 500; /* Peso da fonte */
     font-size: 1rem; /* Tamanho da fonte */
     white-space: nowrap; /* Impede a quebra de linha do texto */
-    transition: background-color 0.2s ease, color 0.2s ease; /* Transição suave para cor de fundo e cor do texto */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Transiï¿½ï¿½o suave para cor de fundo e cor do texto */
     background-color: var(--bg-color); /* Cor de fundo */
     color: var(--secondary-color); /* Cor do texto */
     border: 1px solid var(--bg-color); /* Adiciona uma borda */
@@ -89,28 +202,28 @@ div input:focus {
 }
 
 main {
-    overflow-y: scroll; /* Adiciona uma barra de rolagem vertical se o conteúdo exceder a altura */
-    max-width: 80rem; /* Largura máxima do conteúdo principal */
-    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente */
-    margin-top: 2rem; /* Margem no topo */
-    height: calc(100vh - 10rem - 4rem); /* Calcula a altura para preencher o espaço restante da tela */
+    flex: 1; /* Ocupa todo o espa�o dispon�vel */
+    max-width: 80rem; /* Largura m�xima do conte�do principal */
+    margin: 2rem auto; /* Centraliza horizontalmente com margem superior */
+    padding-bottom: 2rem; /* Espa�amento inferior */
+    overflow-y: auto; /* Scroll quando necess�rio */
 }
 
 article {
     background: none; /* Sem cor de fundo */
     border-radius: 0; /* Sem bordas arredondadas */
     padding: 0; /* Remove o padding */
-    padding: 0 1rem; /* Espaçamento interno nos lados */
+    padding: 0 1rem; /* Espaï¿½amento interno nos lados */
     margin-bottom: 1.25rem; /* Margem inferior */
     box-shadow: none; /* Sem sombra */
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transição suave */
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease; /* Transiï¿½ï¿½o suave */
     border-bottom: 1px solid var(--bg-color); /* Borda inferior */
-    padding-bottom: 1.5rem; /* Espaçamento interno inferior */
+    padding-bottom: 1.5rem; /* Espaï¿½amento interno inferior */
 }
 
 article:hover {
     transform: scale(1.01); /* Aumenta ligeiramente o tamanho ao passar o mouse */
-    cursor: pointer; /* Muda o cursor para uma mão */
+    cursor: pointer; /* Muda o cursor para uma mï¿½o */
 }
 
 article h2 {
@@ -118,7 +231,7 @@ article h2 {
     font-weight: 600; /* Peso da fonte */
     font-size: 1.6rem; /* Tamanho da fonte */
     border-bottom: none; /* Sem borda inferior */
-    padding-bottom: 0; /* Sem espaçamento interno inferior */
+    padding-bottom: 0; /* Sem espaï¿½amento interno inferior */
     margin-bottom: 0.25rem; /* Margem inferior */
     color: var(--primary-color); /* Cor do texto */
 }
@@ -138,7 +251,7 @@ article p strong {
 
 article a {
     color: var(--primary-color); /* Cor do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
+    text-decoration: none; /* Remove o sublinhado padrï¿½o */
     font-weight: 200; /* Peso da fonte */
 }
 
@@ -148,9 +261,12 @@ article a:hover {
 
 .footer {
     text-align: center;
-    padding: 2rem 5%;
-    background-color: var(--surface-color);
-    margin-top: 4rem;
+    color: var(--tertiary-color); /* Cor do texto */
+    background-color: var(--bg-color); /* Cor de fundo */
+    padding: 1.5rem 2rem; /* Espa�amento interno */
+    border-top: 1px solid #3c4043; /* Borda superior */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    margin-top: auto; /* Empurra o footer para o final */
 }
 
 .social-links {
@@ -168,18 +284,6 @@ article a:hover {
     color: var(--primary-color);
 }
 
-.footer {
-    position: absolute; /* Posicionamento absoluto em relação ao elemento pai posicionado */
-    bottom: 0; /* Alinha na parte inferior */
-    left: 0; /* Alinha à esquerda */
-    width: 100%; /* Largura total */
-    color: var(--tertiary-color); /* Cor do texto */
-    background-color: var(--bg-color); /* Cor de fundo */
-    padding: 15px 20px; /* Espaçamento interno */
-    border-top: 1px solid #3c4043; /* Borda superior */
-    font-size: 0.8rem; /* Tamanho da fonte */
-}
-
 .footer-location {
     color: #9aa0a6; /* Cor do texto */
     margin-bottom: 10px; /* Margem inferior */
@@ -188,30 +292,55 @@ article a:hover {
 .footer-links {
     list-style: none; /* Remove os marcadores da lista */
     display: flex; /* Habilita o layout flexbox */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a prï¿½xima linha */
     justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 15px; /* Espaçamento entre os links */
+    gap: 15px; /* Espaï¿½amento entre os links */
 }
 
 .footer-links a {
     color: var(--secondary-color); /* Cor do link */
     text-decoration: none; /* Remove o sublinhado */
-    transition: color 0.2s; /* Transição suave para a cor */
+    transition: color 0.2s; /* Transiï¿½ï¿½o suave para a cor */
 }
 
 .footer-links a:hover {
-    color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variável não definida) */
+    color: var(--accent-color); /* Muda a cor do link ao passar o mouse (variï¿½vel nï¿½o definida) */
 }
 
 @media (max-width: 768px) {
-    header { /* Estilos para telas com largura máxima de 768px */
-        flex-direction: column; /* Organiza os itens do cabeçalho em coluna */
-        padding: 1rem; /* Reduz o espaçamento interno */
+    header { /* Estilos para telas com largura mï¿½xima de 768px */
+        padding: 1.5rem 1rem; /* Reduz o espaï¿½amento interno */
     }
 
-    header h1 { /* Estilos para o h1 no cabeçalho em telas menores */
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 1rem; /* Adiciona margem inferior */
+    header h1 { /* Estilos para o h1 no cabeï¿½alho em telas menores */
+        font-size: 1.8rem; /* Reduz o tamanho da fonte */
+    }
+
+    header h2 { /* Estilos para o h2 no cabeï¿½alho em telas menores */
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .temporada-selector { /* Seletor de temporada em telas menores */
+        flex-direction: column; /* Organiza em coluna */
+        gap: 0.5rem; /* EspaÃ§amento */
+        margin-bottom: 1rem; /* Margem inferior */
+    }
+    
+    .temporada-selector select { /* Select em telas menores */
+        min-width: 100px; /* Largura mÃ­nima */
+    }
+
+    .header-buttons { /* BotÃµes em telas menores */
+        flex-direction: column; /* Organiza os botÃµes em coluna */
+        gap: 0.8rem; /* Reduz o espaÃ§amento */
+    }
+
+    .btn-primary, .btn-secondary { /* Botï¿½es em telas menores */
+        width: 100%; /* Largura total */
+        max-width: none; /* Remove largura mï¿½xima */
+        min-width: none; /* Remove largura mï¿½nima */
+        padding: 0.8rem 1.5rem; /* Reduz o padding */
+        font-size: 1rem; /* Reduz o tamanho da fonte */
     }
 
     div input { /* Estilos para o input em telas menores */
@@ -220,7 +349,7 @@ article a:hover {
     }
 
     main { /* Estilos para o main em telas menores */
-        padding: 0 1rem; /* Adiciona espaçamento lateral */
+        padding: 0 1rem; /* Adiciona espaï¿½amento lateral */
     }
 
     article:hover { /* Estilos para o article em telas menores */
@@ -229,10 +358,28 @@ article a:hover {
 }
 
 @media (max-width: 480px) {
-    header h1 { /* Estilos para o h1 em telas com largura máxima de 480px */
-        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte */
-        max-width: 70%; /* Define uma largura máxima */
+    header { /* Header em telas muito pequenas */
+        padding: 1rem 0.5rem; /* Reduz o padding */
+    }
+
+    header h1 { /* Estilos para o h1 em telas com largura mï¿½xima de 480px */
+        font-size: 1.4rem; /* Reduz ainda mais o tamanho da fonte */
         word-wrap: break-word; /* Permite a quebra de palavras longas */
+    }
+
+    header h2 { /* Estilos para o h2 em telas muito pequenas */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        margin-bottom: 1rem; /* Reduz a margem inferior */
+    }
+
+    .header-buttons { /* Botï¿½es em telas muito pequenas */
+        gap: 0.5rem; /* Reduz o espaï¿½amento */
+    }
+
+    .btn-primary, .btn-secondary { /* Botï¿½es em telas muito pequenas */
+        padding: 0.7rem 1rem; /* Reduz ainda mais o padding */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        letter-spacing: 0.2px; /* Reduz o espaï¿½amento das letras */
     }
 
     div input, /* Estilos para o input e seu placeholder em telas muito pequenas */
@@ -244,19 +391,508 @@ article a:hover {
         font-size: 1.3rem; /* Reduz o tamanho da fonte */
     }
 
-    div { /* Estilos para a div do cabeçalho em telas muito pequenas */
-        display: flex; /* Habilita flexbox */
-        align-items: center; /* Alinha itens ao centro */
-        justify-content: center; /* Centraliza itens */
-        flex-direction: column; /* Organiza em coluna */
-        gap: 0.5rem; /* Espaçamento entre os itens */
+    .footer { /* Estilos para o rodap� em telas muito pequenas */
+        padding: 1rem; /* Reduz o padding */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte */
     }
+}
 
-    .footer { /* Estilos para o rodapé em telas muito pequenas */
-        display: none; /* Oculta o rodapé */
-    }
+/* Estilos para tabela de classificaÃ§Ã£o */
+.tabela-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    button { /* Estilos para o botão em telas muito pequenas */
-        margin-top: 1rem; /* Adiciona margem no topo */
+/* Wrapper para scroll horizontal em dispositivos mÃ³veis */
+.tabela-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-brasileirao {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.tabela-brasileirao th,
+.tabela-brasileirao td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--tertiary-color);
+}
+
+.tabela-brasileirao th {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.tabela-brasileirao .time {
+    text-align: left;
+    min-width: 150px;
+}
+
+.tabela-brasileirao .posicao {
+    font-weight: bold;
+    width: 40px;
+}
+
+.tabela-brasileirao .pontos {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.tabela-brasileirao .nome-time {
+    font-weight: 500;
+}
+
+/* Cores das situa��es */
+.libertadores {
+    border-left: 4px solid #001aff;
+}
+
+.pre-libertadores {
+    border-left: 4px solid #00b8cc;
+}
+
+.sulamericana {
+    border-left: 4px solid #ff9500;
+}
+
+.rebaixamento {
+    border-left: 4px solid #ff4757;
+}
+
+/* Legenda */
+.legenda {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.cor-libertadores,
+.cor-pre-libertadores,
+.cor-sulamericana,
+.cor-rebaixamento {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+}
+
+.cor-libertadores {
+    background-color: #001aff;
+}
+
+.cor-pre-libertadores {
+    background-color: #00b8cc;
+}
+
+.cor-sulamericana {
+    background-color: #ff9500;
+}
+
+.cor-rebaixamento {
+    background-color: #ff4757;
+}
+
+/* Estilos para cards dos times */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-time {
+    background: linear-gradient(135deg, var(--bg-color) 0%, #2a2d30 100%);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--tertiary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-time.clickable {
+    cursor: pointer;
+}
+
+.card-time.clickable:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(138, 180, 248, 0.2);
+}
+
+.card-time:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(138, 180, 248, 0.15);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.posicao-card {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat .label {
+    color: var(--tertiary-color);
+    font-size: 0.9rem;
+}
+
+.stat .value {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.card-situacao {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.card-situacao.campeao {
+    background-color: #ffd700;
+    color: #000;
+}
+
+.card-situacao.libertadores {
+    background-color: #00d2ff;
+    color: #000;
+}
+
+.card-situacao.pre-libertadores {
+    background-color: #00b8cc;
+    color: #000;
+}
+
+.card-situacao.sul-americana {
+    background-color: #ff9500;
+    color: #000;
+}
+
+.card-situacao.rebaixado {
+    background-color: #ff4757;
+    color: #fff;
+}
+
+.card-situacao.serie-a {
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+/* Estados ativos dos botï¿½es */
+.btn-primary.active {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 180, 248, 0.4);
+}
+
+.btn-secondary.active {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(232, 234, 237, 0.3);
+}
+
+/* Responsividade para tabela */
+@media (max-width: 768px) {
+    .tabela-brasileirao {
+        font-size: 0.8rem;
     }
+    
+    .tabela-brasileirao th,
+    .tabela-brasileirao td {
+        padding: 8px 4px;
+    }
+    
+    .tabela-brasileirao .time {
+        min-width: 100px;
+    }
+    
+    .legenda {
+        gap: 1rem;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .card-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para mensagens de erro */
+.erro-carregamento {
+    text-align: center;
+    padding: 2rem;
+    background: #332525;
+    border: 1px solid #cc3333;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.erro-carregamento h3 {
+    color: #ff6b6b;
+    margin: 0 0 1rem 0;
+}
+
+.erro-carregamento p {
+    color: var(--tertiary-color);
+    margin: 0 0 1.5rem 0;
+}
+
+.erro-carregamento button {
+    background: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.erro-carregamento button:hover {
+    background: #6fa8f5;
+}
+
+/* AnimaÃ§Ã£o de loading */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para loading */
+.loading-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--tertiary-color);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Classes utilitÃ¡rias para visibilidade */
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block;
+}
+
+/* Estilos do Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border-radius: 12px;
+    max-width: 600px;
+    max-height: 80vh;
+    width: 90%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(45deg, var(--primary-color), #6fa8f5);
+    color: var(--bg-color);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--bg-color);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: calc(80vh - 120px);
+    overflow-y: auto;
+}
+
+.categoria-titulos {
+    margin-bottom: 1.5rem;
+}
+
+.categoria-titulos h3 {
+    color: var(--primary-color);
+    margin: 0 0 0.8rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--tertiary-color);
+    padding-bottom: 0.5rem;
+}
+
+.titulo-item {
+    background: linear-gradient(135deg, #2a2d30, #333640);
+    margin-bottom: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.titulo-item:hover {
+    transform: translateX(5px);
+}
+
+.titulo-nome {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 0.3rem;
+}
+
+.titulo-anos {
+    color: var(--tertiary-color);
+    font-size: 0.9rem;
+}
+
+.sem-titulos {
+    color: var(--tertiary-color);
+    font-style: italic;
+    padding: 0.5rem 0;
+}
+
+/* Responsividade do modal */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-header {
+        padding: 1rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+        max-height: calc(90vh - 100px);
+    }
+}
+
+/* Container da classificaÃ§Ã£o */
+.classificacao-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Container dos times */
+.times-container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }

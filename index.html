@@ -9,21 +9,41 @@
 <body>
     <!-- Cabeçalho da página -->
     <header>
-        <h1>Base de Conhecimento</h1>
-        <div>
-            <input type="text" placeholder="Pesquisar...">
-            <button type="button" id="botao-busca" onclick="pesquisar()">Buscar</button>
+        <div class="header-content">
+            <h1>Base de Conhecimento</h1>
+            <h2 id="titulo-campeonato">Classificação Brasileirão</h2>
+            
+            <!-- Seletor de Temporada -->
+            <div class="temporada-selector">
+                <label for="select-temporada">Temporada:</label>
+                <select id="select-temporada" onchange="trocarTemporada()">
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            
+            <div class="header-buttons">
+                <button onclick="mostrarClassificacao()" class="btn-primary">Classificação</button>
+                <button onclick="mostrarTimes()" class="btn-secondary">Times</button>
+            </div>
         </div>
     </header>
 
     <!-- Conteúdo principal da página -->
     <main>
-        <section class="card-container">
-            <!--
-            <h1>Aula 1: APRENDER</h1>
-            <h1>Aula 2: NA ALURA</h1> 
-            <h1>Aula 2: COM IA</h1>
-            -->
+        <!-- Seção de Classificação -->
+        <section id="classificacao-section" class="classificacao-container">
+            <div id="tabela-classificacao">
+                <!-- Tabela de classificação será inserida aqui pelo JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção de Times -->
+        <section id="times-section" class="times-container hidden">
+            <div id="cards-times" class="card-container">
+                <!-- Cards dos times serão inseridos aqui pelo JavaScript -->
+            </div>
         </section>
     </main>
 
@@ -31,11 +51,36 @@
     <footer class="footer">
         <p>&copy; 2024 Marcelo Formentini. Todos os direitos reservados.</p>
         <ul class="footer-links">
-            <li><a href="https://www.linkedin.com/in/marcelo-formentini74/" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/in/marcelo-formentini74/" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/MarceloFormentini" target="_blank">GitHub</a></li>
         </ul>
-        
+
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Modal para exibir títulos dos times -->
+    <div id="modal-titulos" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-nome-time"></h2>
+                <button class="modal-close" onclick="fecharModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="titulos-internacionais" class="categoria-titulos">
+                    <h3>🏆 Títulos Internacionais</h3>
+                    <div class="titulos-lista"></div>
+                </div>
+                <div id="titulos-nacionais" class="categoria-titulos">
+                    <h3>🇧🇷 Títulos Nacionais</h3>
+                    <div class="titulos-lista"></div>
+                </div>
+                <div id="titulos-estaduais" class="categoria-titulos">
+                    <h3>🏟️ Títulos Estaduais</h3>
+                    <div class="titulos-lista"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" charset="UTF-8"></script>
 </body>
 </html>
