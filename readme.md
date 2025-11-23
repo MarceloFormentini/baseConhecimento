@@ -12,8 +12,8 @@ Este projeto oferece uma interface moderna e responsiva que mostra a classifica�
 
 ### **Principais Funcionalidades**
 
-- **Classifica��o Detalhada**: Tabela completa com pontos, jogos, vit�rias, empates, derrotas, gols e aproveitamento
-- **Hist�rico de T�tulos**: Modal interativo com títulos internacionais, nacionais e estaduais de cada time
+- **Classificação Detalhada**: Tabela completa com pontos, jogos, vitórias, empates, derrotas, gols e aproveitamento
+- **Histórico de Títulos**: Modal interativo com títulos internacionais, nacionais e estaduais de cada time
 - **Design Responsivo**: Interface adaptada para desktop, tablet e mobile
 - **Indicadores Visuais**: Cores diferenciadas para Libertadores, Pré-Libertadores, Sul-Americana e rebaixamento
 - **Performance**: Carregamento assíncrono e otimizado dos dados
@@ -107,7 +107,7 @@ Clique em qualquer card de time para visualizar (dados fictícios):
 ```json
 {
   "titulos": {
-    "Gr�mio": {
+    "Grêmio": {
       "internacionais": {
         "Copa Libertadores": ["1983", "1995", "2017"],
         "Copa Intercontinental": ["1983"]
@@ -117,7 +117,7 @@ Clique em qualquer card de time para visualizar (dados fictícios):
         "Copa do Brasil": ["1989", "1994", "1997", "2001", "2016"]
       },
       "estaduais": {
-        "Campeonato Ga�cho": ["1921", "1922", "..."]
+        "Campeonato Gaúcho": ["1921", "1922", "..."]
       }
     }
   }
