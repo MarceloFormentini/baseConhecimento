@@ -1,0 +1,367 @@
+{
+  "campeonato": "Campeonato Brasileiro Serie A",
+  "temporada": 2024,
+  "status": "Finalizado",
+  "classificacao": [
+    {
+      "posicao": 1,
+      "time": {
+        "nome": "Botafogo",
+        "sigla": "BOT",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "pontos": 79,
+      "jogos": 38,
+      "vitorias": 23,
+      "empates": 10,
+      "derrotas": 5,
+      "gols_pro": 59,
+      "gols_contra": 29,
+      "saldo_gols": 30,
+      "situacao": "Campeao"
+    },
+    {
+      "posicao": 2,
+      "time": {
+        "nome": "Palmeiras",
+        "sigla": "PAL",
+        "cidade": "São Paulo",
+        "estado": "SP"
+      },
+      "pontos": 73,
+      "jogos": 38,
+      "vitorias": 22,
+      "empates": 7,
+      "derrotas": 9,
+      "gols_pro": 60,
+      "gols_contra": 33,
+      "saldo_gols": 27,
+      "situacao": "Libertadores"
+    },
+    {
+      "posicao": 3,
+      "time": {
+        "nome": "Flamengo",
+        "sigla": "FLA",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "pontos": 70,
+      "jogos": 38,
+      "vitorias": 20,
+      "empates": 10,
+      "derrotas": 8,
+      "gols_pro": 61,
+      "gols_contra": 42,
+      "saldo_gols": 19,
+      "situacao": "Libertadores"
+    },
+    {
+      "posicao": 4,
+      "time": {
+        "nome": "Fortaleza",
+        "sigla": "FOR",
+        "cidade": "Fortaleza",
+        "estado": "CE"
+      },
+      "pontos": 68,
+      "jogos": 38,
+      "vitorias": 19,
+      "empates": 11,
+      "derrotas": 8,
+      "gols_pro": 53,
+      "gols_contra": 39,
+      "saldo_gols": 14,
+      "situacao": "Libertadores"
+    },
+    {
+      "posicao": 5,
+      "time": {
+        "nome": "Internacional",
+        "sigla": "INT",
+        "cidade": "Porto Alegre",
+        "estado": "RS"
+      },
+      "pontos": 65,
+      "jogos": 38,
+      "vitorias": 18,
+      "empates": 11,
+      "derrotas": 9,
+      "gols_pro": 53,
+      "gols_contra": 36,
+      "saldo_gols": 17,
+      "situacao": "Libertadores"
+    },
+    {
+      "posicao": 6,
+      "time": {
+        "nome": "São Paulo",
+        "sigla": "SAO",
+        "cidade": "São Paulo",
+        "estado": "SP"
+      },
+      "pontos": 59,
+      "jogos": 38,
+      "vitorias": 17,
+      "empates": 8,
+      "derrotas": 13,
+      "gols_pro": 53,
+      "gols_contra": 43,
+      "saldo_gols": 10,
+      "situacao": "Libertadores"
+    },
+    {
+      "posicao": 7,
+      "time": {
+        "nome": "Corinthians",
+        "sigla": "COR",
+        "cidade": "São Paulo",
+        "estado": "SP"
+      },
+      "pontos": 56,
+      "jogos": 38,
+      "vitorias": 15,
+      "empates": 11,
+      "derrotas": 12,
+      "gols_pro": 54,
+      "gols_contra": 45,
+      "saldo_gols": 9,
+      "situacao": "Pre-Libertadores"
+    },
+    {
+      "posicao": 8,
+      "time": {
+        "nome": "Bahia",
+        "sigla": "BAH",
+        "cidade": "Salvador",
+        "estado": "BA"
+      },
+      "pontos": 53,
+      "jogos": 38,
+      "vitorias": 15,
+      "empates": 8,
+      "derrotas": 15,
+      "gols_pro": 49,
+      "gols_contra": 49,
+      "saldo_gols": 0,
+      "situacao": "Pre-Libertadores"
+    },
+    {
+      "posicao": 9,
+      "time": {
+        "nome": "Cruzeiro",
+        "sigla": "CRU",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "pontos": 52,
+      "jogos": 38,
+      "vitorias": 14,
+      "empates": 10,
+      "derrotas": 14,
+      "gols_pro": 43,
+      "gols_contra": 41,
+      "saldo_gols": 2,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 10,
+      "time": {
+        "nome": "Vasco da Gama",
+        "sigla": "VAS",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "pontos": 50,
+      "jogos": 38,
+      "vitorias": 14,
+      "empates": 8,
+      "derrotas": 16,
+      "gols_pro": 43,
+      "gols_contra": 56,
+      "saldo_gols": -13,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 11,
+      "time": {
+        "nome": "Vitória",
+        "sigla": "VIT",
+        "cidade": "Salvador",
+        "estado": "BA"
+      },
+      "pontos": 47,
+      "jogos": 38,
+      "vitorias": 13,
+      "empates": 8,
+      "derrotas": 17,
+      "gols_pro": 45,
+      "gols_contra": 52,
+      "saldo_gols": -7,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 12,
+      "time": {
+        "nome": "Atlético-MG",
+        "sigla": "CAM",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "pontos": 47,
+      "jogos": 38,
+      "vitorias": 11,
+      "empates": 14,
+      "derrotas": 13,
+      "gols_pro": 47,
+      "gols_contra": 54,
+      "saldo_gols": -7,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 13,
+      "time": {
+        "nome": "Fluminense",
+        "sigla": "FLU",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "pontos": 46,
+      "jogos": 38,
+      "vitorias": 12,
+      "empates": 10,
+      "derrotas": 16,
+      "gols_pro": 33,
+      "gols_contra": 39,
+      "saldo_gols": -6,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 14,
+      "time": {
+        "nome": "Grêmio",
+        "sigla": "GRE",
+        "cidade": "Porto Alegre",
+        "estado": "RS"
+      },
+      "pontos": 45,
+      "jogos": 38,
+      "vitorias": 12,
+      "empates": 9,
+      "derrotas": 17,
+      "gols_pro": 44,
+      "gols_contra": 50,
+      "saldo_gols": -6,
+      "situacao": "Sul-Americana"
+    },
+    {
+      "posicao": 15,
+      "time": {
+        "nome": "Juventude",
+        "sigla": "JUV",
+        "cidade": "Caxias do Sul",
+        "estado": "RS"
+      },
+      "pontos": 45,
+      "jogos": 38,
+      "vitorias": 11,
+      "empates": 12,
+      "derrotas": 15,
+      "gols_pro": 48,
+      "gols_contra": 59,
+      "saldo_gols": -11,
+      "situacao": "Serie A"
+    },
+    {
+      "posicao": 16,
+      "time": {
+        "nome": "Bragantino",
+        "sigla": "BRA",
+        "cidade": "Bragança Paulista",
+        "estado": "SP"
+      },
+      "pontos": 44,
+      "jogos": 38,
+      "vitorias": 10,
+      "empates": 14,
+      "derrotas": 14,
+      "gols_pro": 44,
+      "gols_contra": 48,
+      "saldo_gols": -4,
+      "situacao": "Serie A"
+    },
+    {
+      "posicao": 17,
+      "time": {
+        "nome": "Athletico-PR",
+        "sigla": "CAP",
+        "cidade": "Curitiba",
+        "estado": "PR"
+      },
+      "pontos": 42,
+      "jogos": 38,
+      "vitorias": 11,
+      "empates": 9,
+      "derrotas": 18,
+      "gols_pro": 40,
+      "gols_contra": 46,
+      "saldo_gols": -6,
+      "situacao": "Rebaixado"
+    },
+    {
+      "posicao": 18,
+      "time": {
+        "nome": "Criciúma",
+        "sigla": "CRI",
+        "cidade": "Criciúma",
+        "estado": "SC"
+      },
+      "pontos": 38,
+      "jogos": 38,
+      "vitorias": 9,
+      "empates": 11,
+      "derrotas": 18,
+      "gols_pro": 42,
+      "gols_contra": 61,
+      "saldo_gols": -19,
+      "situacao": "Rebaixado"
+    },
+    {
+      "posicao": 19,
+      "time": {
+        "nome": "Atlético-GO",
+        "sigla": "ACG",
+        "cidade": "Goiânia",
+        "estado": "GO"
+      },
+      "pontos": 30,
+      "jogos": 38,
+      "vitorias": 7,
+      "empates": 9,
+      "derrotas": 22,
+      "gols_pro": 29,
+      "gols_contra": 58,
+      "saldo_gols": -29,
+      "situacao": "Rebaixado"
+    },
+    {
+      "posicao": 20,
+      "time": {
+        "nome": "Cuiabá",
+        "sigla": "CUI",
+        "cidade": "Cuiabá",
+        "estado": "MT"
+      },
+      "pontos": 30,
+      "jogos": 38,
+      "vitorias": 6,
+      "empates": 12,
+      "derrotas": 20,
+      "gols_pro": 29,
+      "gols_contra": 49,
+      "saldo_gols": -20,
+      "situacao": "Rebaixado"
+    }
+  ]
+}
